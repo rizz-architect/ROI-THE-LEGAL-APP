@@ -152,8 +152,8 @@ ROI-THE-LEGAL-APP/
 
 ## License & Intellectual Property
 
-**Proprietary Portfolio Project** — All rights reserved by **Sriram Gandhi S**.
+**Proprietary Portfolio Project** — All rights reserved by **Sriram S**.
 
 This repository is published exclusively for educational review, architectural assessment, and portfolio evaluation. Unauthorized replication, redistribution, commercialization, or modifications of this source code are strictly prohibited without written consent from the author.
 
-*Developed by [Sriram Gandhi S](https://github.com/SriramGandhiS).*
+*Developed by [Sriram S](https://github.com/SriramGandhiS).*
