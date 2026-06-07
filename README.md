@@ -1,4 +1,4 @@
-# ⚖️ ROI — The Legal App (Rules of India)
+# ROI — The Legal App (Rules of India)
 
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev)
@@ -10,18 +10,18 @@ An enterprise-grade, multi-platform legal assistance ecosystem built with **Flut
 
 ---
 
-## 📋 Table of Contents
-- [System Architecture](#-system-architecture)
-- [Key Features](#-key-features)
-- [Tech Stack](#-tech-stack)
-- [Project Directory Structure](#-project-directory-structure)
-- [Security & Access Configuration](#-security--access-configuration)
-- [Installation & Setup](#-installation--setup)
-- [License & Intellectual Property](#-license--intellectual-property)
+## Table of Contents
+- [System Architecture](#system-architecture)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Project Directory Structure](#project-directory-structure)
+- [Security & Access Configuration](#security--access-configuration)
+- [Installation & Setup](#installation--setup)
+- [License & Intellectual Property](#license--intellectual-property)
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 graph TD
@@ -56,24 +56,24 @@ graph TD
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 1. **NEEDHi (AI Legal Tutor)**
+### 1. NEEDHi (AI Legal Tutor)
 *   A sophisticated, structured AI chatbot designed to explain complex Indian Constitutional laws, criminal codes, and civic rights.
 *   **Multilingual Support**: Fully localized legal advice dynamically translated and rendered in multiple languages (Hindi, Tamil, Telugu, Kannada, Bengali, etc.).
 
-### 2. **VIDDHI (Voice AI Assistant)**
+### 2. VIDDHI (Voice AI Assistant)
 *   A hands-free, high-speed voice assistant that integrates browser/device microphones with real-time speech-to-text and AI legal logic to provide instant verbal legal consultations.
 
-### 3. **AI-Driven Daily Quiz**
+### 3. AI-Driven Daily Quiz
 *   An interactive feature that dynamically generates daily legal scenario challenges to test the user's understanding of fundamental rights and constitutional provisions, tracking scores inside Firebase.
 
-### 4. **Statute Transformation (IPC vs. BNS)**
+### 4. Statute Transformation (IPC vs. BNS)
 *   A comprehensive comparative tool mapping sections of the legacy **Indian Penal Code (IPC)** directly to the newly enacted **Bharatiya Nyaya Sanhita (BNS)** to assist users and legal professionals in understanding transitional codes.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 *   **Mobile Framework**: Flutter (Dart) with Bloc/Provider state management
 *   **Web Console**: React.js with Tailwind CSS
@@ -83,7 +83,7 @@ graph TD
 
 ---
 
-## 📂 Project Directory Structure
+## Project Directory Structure
 
 ```text
 ROI-THE-LEGAL-APP/
@@ -103,7 +103,7 @@ ROI-THE-LEGAL-APP/
 
 ---
 
-## 🔒 Security & Access Configuration
+## Security & Access Configuration
 
 > [!IMPORTANT]
 > **API Key Sanitization Notice:** All production API keys (Gemini, OpenAI, Groq, and Firebase credentials) have been removed from the public repository to prevent security risks. 
@@ -111,9 +111,9 @@ ROI-THE-LEGAL-APP/
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
-### 📱 Running the Flutter Mobile App
+### Running the Flutter Mobile App
 1. Navigate to the mobile application directory:
    ```bash
    cd roi_app
@@ -130,7 +130,7 @@ ROI-THE-LEGAL-APP/
    flutter run
    ```
 
-### 💻 Running the React Web Dashboard
+### Running the React Web Dashboard
 1. Navigate to the web project directory:
    ```bash
    cd legalytics-react
@@ -150,10 +150,10 @@ ROI-THE-LEGAL-APP/
 
 ---
 
-## 📄 License & Intellectual Property
+## License & Intellectual Property
 
 **Proprietary Portfolio Project** — All rights reserved by **Sriram Gandhi S**.
 
 This repository is published exclusively for educational review, architectural assessment, and portfolio evaluation. Unauthorized replication, redistribution, commercialization, or modifications of this source code are strictly prohibited without written consent from the author.
 
-*Developed with ⚖️ by [Sriram Gandhi S](https://github.com/SriramGandhiS).*
+*Developed by [Sriram Gandhi S](https://github.com/SriramGandhiS).*
