@@ -1,43 +1,159 @@
-# ROI - THE LEGAL APP (Rules of India)
+# ⚖️ ROI — The Legal App (Rules of India)
 
-A comprehensive legal assistance platform built with Flutter and React, designed to empower Indian citizens with legal knowledge using AI.
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com)
+[![Groq](https://img.shields.io/badge/Groq-AI-orange?style=for-the-badge&logo=openai&logoColor=white)](https://groq.com)
+[![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)
 
-## ⚠️ Important Security Notice
-**Only Sriram (the owner) can access all APIs and related services.** 
-All API keys have been removed from the public source code for security. To use the AI features (Gemini, ChatGPT, Groq), you must request sriram for api key and integrated chats
-
-**DO NOT try to pirate or misuse this application.** Contact the owner for authorized access or collaboration.
+An enterprise-grade, multi-platform legal assistance ecosystem built with **Flutter (Mobile)** and **React (Web)**, designed to democratize legal awareness and empower Indian citizens with constitutional and legal knowledge via advanced Artificial Intelligence.
 
 ---
 
-## 📱 Features
-- **NEEDHi (AI Legal Tutor)**: A structured AI chatbot that explains Indian Constitutional laws in multiple local languages (Hindi, Tamil, Telugu, etc.).
-- **VIDDHI (Voice AI)**: A hands-free voice assistant for conversational legal advice.
-- **AI Daily Quiz**: Dynamically generated legal challenges to test your knowledge of the Constitution.
-- **IPC vs BNS**: Detailed comparisons and information on Indian Penal Code and the new Bharatiya Nyaya Sanhita.
-- **Fundamental Rights**: Easy-to-understand explanations of your rights.
+## 📋 Table of Contents
+- [System Architecture](#-system-architecture)
+- [Key Features](#-key-features)
+- [Tech Stack](#-tech-stack)
+- [Project Directory Structure](#-project-directory-structure)
+- [Security & Access Configuration](#-security--access-configuration)
+- [Installation & Setup](#-installation--setup)
+- [License & Intellectual Property](#-license--intellectual-property)
 
-## 🚀 Tech Stack
-- **Mobile**: Flutter (Dart)
-- **Web**: React.js
-- **Backend**: Firebase (Authentication, Firestore, Storage)
-- **AI Integration**: Groq (Llama 3), Google Gemini, OpenAI
-- **UI/UX**: Custom themed components with Inter and Plus Jakarta Sans typography.
+---
 
-## 🛠️ Getting Started (For Future Use)
-1. **Clone the repository**:
+## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    A[Citizen User] -->|Flutter Mobile App| B(Mobile Front-End)
+    A -->|React Web App| C(Web Admin/Chat Console)
+    
+    subgraph Client Layer
+        B
+        C
+    end
+
+    subgraph Orchestration & Data Layer
+        D[Firebase Auth]
+        E[Firestore DB]
+        F[Firebase Storage]
+    end
+
+    subgraph AI Processing Core
+        G[Google Gemini Pro]
+        H[Groq Llama 3]
+        I[OpenAI GPT-4]
+    end
+
+    B -->|Auth & Analytics| D
+    B -->|User Data & Offline Sync| E
+    C -->|Configuration & Auditing| E
+    
+    B -->|Secure API Requests| G
+    B -->|Voice AI Inference| H
+    C -->|Deep Legal Document Parsing| I
+```
+
+---
+
+## ✨ Key Features
+
+### 1. **NEEDHi (AI Legal Tutor)**
+*   A sophisticated, structured AI chatbot designed to explain complex Indian Constitutional laws, criminal codes, and civic rights.
+*   **Multilingual Support**: Fully localized legal advice dynamically translated and rendered in multiple languages (Hindi, Tamil, Telugu, Kannada, Bengali, etc.).
+
+### 2. **VIDDHI (Voice AI Assistant)**
+*   A hands-free, high-speed voice assistant that integrates browser/device microphones with real-time speech-to-text and AI legal logic to provide instant verbal legal consultations.
+
+### 3. **AI-Driven Daily Quiz**
+*   An interactive feature that dynamically generates daily legal scenario challenges to test the user's understanding of fundamental rights and constitutional provisions, tracking scores inside Firebase.
+
+### 4. **Statute Transformation (IPC vs. BNS)**
+*   A comprehensive comparative tool mapping sections of the legacy **Indian Penal Code (IPC)** directly to the newly enacted **Bharatiya Nyaya Sanhita (BNS)** to assist users and legal professionals in understanding transitional codes.
+
+---
+
+## 🛠️ Tech Stack
+
+*   **Mobile Framework**: Flutter (Dart) with Bloc/Provider state management
+*   **Web Console**: React.js with Tailwind CSS
+*   **Backend & DB**: Firebase (Authentication, Firestore Realtime Database, Cloud Storage)
+*   **AI Models**: Groq Llama 3, Google Gemini Pro, OpenAI GPT-4 API
+*   **Design System**: Curated Plus Jakarta Sans & Inter typography, sleek dark mode aesthetics
+
+---
+
+## 📂 Project Directory Structure
+
+```text
+ROI-THE-LEGAL-APP/
+├── roi_app/                  # Flutter Mobile Application
+│   ├── lib/
+│   │   ├── consts.dart       # API & Theme configurations
+│   │   ├── screens/          # NEEDHi Chat, Quiz, and Legal Info Screens
+│   │   └── main.dart         # Entrypoint
+│   └── android/app/          # Android Native wrapper
+├── legalytics-react/         # React Web Companion Dashboard
+│   ├── src/
+│   │   ├── components/       # Custom Legal UI Elements
+│   │   ├── services/         # API & Groq connection modules
+│   │   └── App.js            # Web UI Orchestration
+└── README.md                 # Project Documentation
+```
+
+---
+
+## 🔒 Security & Access Configuration
+
+> [!IMPORTANT]
+> **API Key Sanitization Notice:** All production API keys (Gemini, OpenAI, Groq, and Firebase credentials) have been removed from the public repository to prevent security risks. 
+> To test the interactive AI features, you must configure your local configuration files with valid API tokens as detailed in the setup steps.
+
+---
+
+## 🚀 Installation & Setup
+
+### 📱 Running the Flutter Mobile App
+1. Navigate to the mobile application directory:
    ```bash
-   git clone https://github.com/SriramGandhiS/ROI-THE-LEGAL-APP.git
+   cd roi_app
    ```
-2. **Setup Flutter**:
-   - Navigate to `roi_app/`.
-   - Run `flutter pub get`.
-   - Add your `google-services.json` to `android/app/`.
-   - Add your API keys in `lib/consts.dart` and `lib/screens/ChatbotScreen.dart`.
-3. **Setup React**:
-   - Navigate to `legalytics-react/`.
-   - Run `npm install`.
-   - Add your Groq API key in `src/services/groq.js`.
+2. Fetch project dependencies:
+   ```bash
+   flutter pub get
+   ```
+3. Add your `google-services.json` (downloaded from your Firebase Console) to the `android/app/` directory.
+4. Input your custom API keys into the corresponding config file:
+   * Edit `lib/consts.dart` or `lib/screens/ChatbotScreen.dart`
+5. Launch the application on a connected device/emulator:
+   ```bash
+   flutter run
+   ```
 
-## 📄 License
-This project is for educational and portfolio purposes. All rights reserved by Sriram Gandhi S.
+### 💻 Running the React Web Dashboard
+1. Navigate to the web project directory:
+   ```bash
+   cd legalytics-react
+   ```
+2. Install npm packages:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the root of the folder and configure your API endpoint:
+   ```env
+   REACT_APP_GROQ_API_KEY=your_groq_key_here
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+
+---
+
+## 📄 License & Intellectual Property
+
+**Proprietary Portfolio Project** — All rights reserved by **Sriram Gandhi S**.
+
+This repository is published exclusively for educational review, architectural assessment, and portfolio evaluation. Unauthorized replication, redistribution, commercialization, or modifications of this source code are strictly prohibited without written consent from the author.
+
+*Developed with ⚖️ by [Sriram Gandhi S](https://github.com/SriramGandhiS).*
